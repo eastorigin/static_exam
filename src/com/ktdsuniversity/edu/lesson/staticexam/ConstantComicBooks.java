@@ -1,15 +1,14 @@
 package com.ktdsuniversity.edu.lesson.staticexam;
 
-public class ComicBooks {
+public class ConstantComicBooks {
 	
 	private String bookName;
 	private boolean isRented;
-	private int rentalFee;
+	private static final int RENTALFEE = 1000;
 	
-	public ComicBooks(String bookName, boolean isRented, int rentalFee) {
+	public ConstantComicBooks(String bookName, boolean isRented) {
 		this.bookName = bookName;
 		this.isRented = isRented;
-		this.rentalFee = rentalFee;
 	}
 	
 	public String getBookName() {
@@ -20,8 +19,8 @@ public class ComicBooks {
 		return isRented;
 	}
 	
-	public int getRent() {
-		return rentalFee;
+	public int getRentalFee() {
+		return RENTALFEE;
 	}
 	
 	public void changeRent() {
@@ -32,3 +31,4 @@ public class ComicBooks {
 		this.isRented = false;
 	}
 }
+

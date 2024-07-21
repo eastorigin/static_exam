@@ -1,6 +1,6 @@
 package com.ktdsuniversity.edu.lesson.staticexam;
 
-public class ComicCafe {
+public class ConstantComicCafe {
 
 	private int money;
 	private ComicBooks comicBooks1;
@@ -8,7 +8,7 @@ public class ComicCafe {
 	private ComicBooks comicBooks3;
 	private ComicBooks comicBooks4;
 	
-	public ComicCafe (ComicBooks comicBooks1, ComicBooks comicBooks2, ComicBooks comicBooks3, ComicBooks comicBooks4, int money) {
+	public ConstantComicCafe(ComicBooks comicBooks1, ComicBooks comicBooks2, ComicBooks comicBooks3, ComicBooks comicBooks4, int money) {
 		this.comicBooks1 = comicBooks1;
 		this.comicBooks2 = comicBooks2;
 		this.comicBooks3 = comicBooks3;
@@ -21,8 +21,8 @@ public class ComicCafe {
 	}
 	
 	public void printComicBook(ComicBooks comicBooks) {
-		if(comicBooks != null) {
-			if(comicBooks.getIsRented()) {
+		if (comicBooks != null) {
+			if (comicBooks.getIsRented()) {
 				System.out.println(comicBooks.getBookName() + ": 대여 중");
 			}else {
 				System.out.println(comicBooks.getBookName() + ": 대여 가능");
@@ -40,29 +40,30 @@ public class ComicCafe {
 	}
 	
 	public void rentComicBooks(ComicBooks comicBooks, String bookName) {
-		if(comicBooks != null && comicBooks.getBookName().equals(bookName)) {
-			if(!comicBooks.getIsRented()) {
+		if (comicBooks != null && comicBooks.getBookName().equals(bookName)) {
+			if (!comicBooks.getIsRented()) {
 				comicBooks.changeRent();
 				this.money += comicBooks.getRent();
 				System.out.println(comicBooks.getBookName() + "을 대여했습니다");
-			}else {
+			} else {
 				System.out.println(comicBooks.getBookName() + "은 이미 대여 중입니다");
 			}
-		}else {
+		} else {
 			System.out.println("만화책이 아직 준비되지 않았습니다.");
 		}
 	}
 	
 	public void returnComicBooks(ComicBooks comicBooks, String bookName) {
-		if(comicBooks != null && comicBooks.getBookName().equals(bookName)) {
-			if(comicBooks.getIsRented()) {
+		if (comicBooks != null && comicBooks.getBookName().equals(bookName)) {
+			if (comicBooks.getIsRented()) {
 				comicBooks.changeReturn();
 				System.out.println(comicBooks.getBookName() + "을 반납했습니다");
-			}else {
+			} else {
 				System.out.println("대여하지 않은 책입니다");
 			}
-		}else {
+		} else {
 			System.out.println("만화책이 아직 준비되지 않았습니다.");
 		}
 	}
 }
+
