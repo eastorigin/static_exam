@@ -58,5 +58,29 @@ public class PracticeClassMethod {
 	}
 	
 	// 문제 4
+	public static double getCourseCredit2(double average) {
+		if(average < 55) {
+			return 0.1;
+		}else {
+			return (average - 55) / 10.0;
+		}
+	}
 	
+	public static String getABCDEF(double courseCredit2) {
+		if(courseCredit2 >= 4.1) {
+			return "A+";
+		}else if(courseCredit2 >= 3.6) {
+			return "A";
+		}else if(courseCredit2 >= 3.1) {
+			return "B+";
+		}else if(courseCredit2 >= 2.6) {
+			return "B";
+		}else if(courseCredit2 >= 1.6) {
+			return "C";
+		}else if(courseCredit2 >= 0.6) {
+			return "D";
+		}else {
+			return "F";
+		}
+	}
 }
