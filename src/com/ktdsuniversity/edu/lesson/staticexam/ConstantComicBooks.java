@@ -4,7 +4,13 @@ public class ConstantComicBooks {
 	
 	private String bookName;
 	private boolean isRented;
-	private static final int RENTALFEE = 1000;
+	// private static final int RENTALFEE;
+	public static final int RENTALFEE; // 전역 변수라 public으로 써야 됨
+	
+	//  클래스 상수를 초기화 구역
+	static {
+		RENTALFEE = 1000;
+	}
 	
 	public ConstantComicBooks(String bookName, boolean isRented) {
 		this.bookName = bookName;

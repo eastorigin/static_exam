@@ -4,11 +4,12 @@ public class PracticeClassMethod {
 
 	// 문제 1
 	public static boolean isValidAge(int age, int min, int max) {
-		if(age > min && age < max) {
-			return true;
-		}else {
-			return false;
-		}
+//		if(age > min && age < max) {
+//			return true;
+//		}else {
+//			return false;
+//		}
+		return age > min && age < max;
 	}
 	
 	// 문제 2

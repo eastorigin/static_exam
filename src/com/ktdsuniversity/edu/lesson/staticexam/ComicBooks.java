@@ -2,6 +2,9 @@ package com.ktdsuniversity.edu.lesson.staticexam;
 
 public class ComicBooks {
 	
+	/**
+	 * 멤버변수는 주석이 아니라 document로 설명하는게 좋다
+	 */
 	private String bookName;
 	private boolean isRented;
 	private int rentalFee;
